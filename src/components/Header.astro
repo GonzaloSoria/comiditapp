@@ -1,7 +1,7 @@
 <header class="px-5 py-5 fixed top-0 w-full">
     <nav class="container mx-auto">
         <div class="flex justify-between">
-            <h2>Comidit<span class="text-first-color">app</span></h2>
+            <h2>Comidit<span>app</span></h2>
             <div>
                 <input type="checkbox" id="checkbox">
                 <label for="checkbox" class="checkbox-label">
@@ -21,6 +21,10 @@
 </header>
 
 <style>
+    header {
+        background-color: #000000;
+    }
+
     .checkbox-label {
         width: 50px;
         height: 30px;
@@ -93,7 +97,7 @@
 
     .menu-container li a::after {
         content: '';
-        background-color: #ED3510;
+        background-color: #57A83B;
         width: 0px;
         height: 4px;
         position: absolute;
@@ -112,7 +116,13 @@
     }
 
     h2 {
+        font-size: 20px;
+        font-weight: 800;
         color: #FAFAFA;
+    }
+
+    span {
+        color: #57A83B;
     }
 
 </style>
