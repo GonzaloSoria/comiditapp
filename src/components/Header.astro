@@ -1,4 +1,4 @@
-<header class="px-5 py-5 fixed top-0 w-full">
+<header class="px-5 py-5 md:py-10 fixed top-0 w-full">
     <nav class="container mx-auto">
         <div class="flex justify-between">
             <h2>Comidit<span>app</span></h2>
@@ -91,7 +91,6 @@
         position: relative;
         font-size: 30px;
         margin-bottom: 20px;
-        font-family: 'Raleway', sans-serif;
         font-weight: 800;
     }
 
@@ -104,6 +103,7 @@
         left: 0;
         bottom: -10px;
         border-bottom-right-radius: 50px;
+        border-top-right-radius: 50px;
         transition: all 0.2s ease;
     }
 
@@ -123,6 +123,27 @@
 
     span {
         color: #57A83B;
+    }
+
+    @media screen and (min-width: 1200px) {
+        .checkbox-label {
+            display: none;
+        }
+
+        .menu-container {
+            height: inherit;
+            transform: inherit;
+            position: inherit;
+            flex-direction: row;
+        }
+
+        .menu-container li {
+            padding: 0 80px 0 0;
+            font-size: 20px;
+            font-weight: 400;
+            text-transform: capitalize;
+            margin-bottom: 0;
+        }
     }
 
 </style>
