@@ -1,0 +1,40 @@
+---
+import sushi from '../img/sushi-hero.png';
+---
+
+<section class="hero">
+    <div class="container mx-auto px-5 py-32">
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+            <div class="flex flex-col justify-center">
+                <h1 class="mb-3">Fresco, Artesanal y <span class="text-first-color">ruiquisimo</span>!</h1>
+                <p>Tenemos una gran variedad para que disfrutes un poco de todo</p>
+            </div>
+            <div class="py-8">
+                <img src={sushi} alt="" class="mx-auto">
+            </div>
+        </div>
+    </div>    
+</section>
+
+<style>
+    .hero {
+        background-color: #252525;
+        background-image: url('../img/bg-pizarra.png');
+        background-position: center;
+        background-size: cover;
+    }
+
+    h1 {
+        font-size: 40px;
+        line-height: 43px;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: #FAFAFA;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 23px;
+        color: #FAFAFA;
+    }
+</style>
