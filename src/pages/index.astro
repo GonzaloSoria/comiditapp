@@ -1,10 +1,12 @@
 ---
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero/Hero.jsx";
+import Menu from "../components/Menu.astro";
 import Layout from "../layout/Layout.astro"
 ---
 
 <Layout>
 	<Header />
 	<Hero client:load/>
+	<Menu />
 </Layout>

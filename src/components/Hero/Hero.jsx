@@ -3,17 +3,16 @@ import '../Hero/style.css';
 
 const Hero = () => {
     const [sushi_hero, setSushiHero] = useState('../img/sushi-hero.png');
-    const [pieces, setPieces] = useState('36 Piezas variadas (Salmón, Langostinos, Kanikama)');
+    const [pieces, setPieces] = useState('40');
     let sushi_hero2 = '../img/sushi-hero2.png';
     let sushi_hero3 = '../img/sushi-hero3.png';
-    let pieces2 = '24 Piezas variadas (Salmón y Langostinos)';
-    let pieces3 = '24 Piezas variadas full Salmón (Incluye 2 Nigiris)';
-
+    let pieces2 = '36';
+    let pieces3 = '24';
 
     const change_sushi_table = (route) => {
         setSushiHero(route);
         if(route == '../img/sushi-hero.png') {
-            setPieces('36 Piezas variadas (Salmón, Langostinos, Kanikama)');
+            setPieces('40');
         } else if (route == '../img/sushi-hero2.png') {
             setPieces(pieces2);
         } else if (route == '../img/sushi-hero3.png') {
@@ -33,7 +32,7 @@ const Hero = () => {
                         </div>
                         <div className="pt-16">
                             <img src={sushi_hero} alt="sushi" className="sushi-hero mx-auto" id="sushi" />
-                            <p onClick={() =>change_sushi_table(sushi_hero2)} className='pt-8 text-center text-second-color'>{pieces}</p>
+                            <p onClick={() =>change_sushi_table(sushi_hero2)} className='pt-8 text-center text-second-color'>{pieces} Piezas variadas</p>
                         </div>
                     </div>
                     <div className="flex justify-center pt-10 lg:justify-start lg:pt-5">
