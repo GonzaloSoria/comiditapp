@@ -6,6 +6,9 @@ module.exports = {
 		colors: {
 			'first-color': '#57A83B',
 			'second-color': '#F3B700'
+		},
+		fontSize: {
+			'title-lg': ['80px', '83px']
 		}
 	},
 	plugins: [],
