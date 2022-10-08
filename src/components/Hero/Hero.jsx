@@ -41,7 +41,8 @@ const Hero = () => {
                         <img onClick={() =>change_sushi_table(sushi_hero3)} src="../img/sushi-hero3.png" alt="" className="img-small" />
                     </div>
                     <p className="mt-8 text-center lg:text-left">Tablas mejor valoradas</p>
-                </div>    
+                </div>
+                <img src="../img/divider.png" className='w-full'/>    
             </section>
         </>
     )
