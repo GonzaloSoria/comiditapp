@@ -35,14 +35,14 @@ const Hero = () => {
                             <p onClick={() =>change_sushi_table(sushi_hero2)} className='pt-8 text-center text-second-color'>{pieces} Piezas variadas</p>
                         </div>
                     </div>
-                    <div className="flex justify-center pt-10 lg:justify-start lg:pt-5">
+                    <div className="flex justify-center pt-10 lg:pt-5">
                         <img onClick={() =>change_sushi_table('../img/sushi-hero.png')} src="../img/sushi-hero.png" alt="" className="img-small" />
                         <img onClick={() =>change_sushi_table(sushi_hero2)} src="../img/sushi-hero2.png" alt="" className="img-small" />
                         <img onClick={() =>change_sushi_table(sushi_hero3)} src="../img/sushi-hero3.png" alt="" className="img-small" />
                     </div>
-                    <p className="mt-8 text-center lg:text-left">Tablas mejor valoradas</p>
+                    <p className="mt-8 text-center">Tablas mejor valoradas</p>
                 </div>
-                <img src="../img/divider.png" className='w-full'/>    
+                <img src="http://themes.templatescoder.com/pizzon/html/demo/1-0/images/menu-bottom-bg.png" className='w-full'/>    
             </section>
         </>
     )

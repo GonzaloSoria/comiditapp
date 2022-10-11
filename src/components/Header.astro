@@ -1,3 +1,7 @@
+---
+const { links } = Astro.props;
+---
+
 <header class="px-5 py-5 md:py-10 fixed top-0 w-full">
     <nav class="container mx-auto">
         <div class="flex justify-between">
@@ -10,10 +14,11 @@
                     <span class="span3"></span>
                 </label>
                 <ul class="menu-container">
-                    <li><a href="#">Menú</a></li>
-                    <li><a href="#">Faq's</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Suscribite</a></li>
+                    {
+                        links.map((link: { url: string; title: string; }) => (
+                            <li><a href={link.url}>{link.title}</a></li>
+                        ))
+                    }
                 </ul>
             </div>
         </div>

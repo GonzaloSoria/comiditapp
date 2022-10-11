@@ -2,11 +2,14 @@
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero/Hero.jsx";
 import Menu from "../components/Menu.astro";
+import { data } from "../data";
 import Layout from "../layout/Layout.astro"
 ---
 
 <Layout>
-	<Header />
+	<Header 
+		links={data.header.links}
+	/>
 	<Hero client:load/>
 	<Menu />
 </Layout>
