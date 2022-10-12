@@ -11,5 +11,7 @@ import Layout from "../layout/Layout.astro"
 		links={data.header.links}
 	/>
 	<Hero client:load/>
-	<Menu />
+	<Menu 
+		rolls={data.menu.rolls}
+	/>
 </Layout>

@@ -1,4 +1,7 @@
 ---
+const { rolls } = Astro.props;
+
+console.log(rolls.title);
 
 ---
 
@@ -6,50 +9,21 @@
     <div class="container mx-auto">
         <h2 class="text-center mb-5">Menú</h2>
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-4">
-            <article class="py-2">
-                <div class="flex justify-between items-end border-bottom">
-                    <h4>California Roll</h4>
-                    <span>$1200</span>
-                </div>
-                <div class="flex justify-between items-center mt-5">
-                    <p class="pr-5">Salmón, Philadelphia, Palta y Sésamo</p>
-                    <img src="../img/california-roll.png" alt="California Roll">
-                </div>
-                <p class="text-first-color">12 Unidades</p>
-            </article>
-            <article class="py-2">
-                <div class="flex justify-between items-end border-bottom">
-                    <h4>Smoke Roll</h4>
-                    <span>$1200</span>
-                </div>
-                <div class="flex justify-between items-center mt-5">
-                    <p class="pr-5">Philadelphia, Palta cubierto de Salmón</p>
-                    <img src="../img/smoked-roll.png" alt="California Roll">
-                </div>
-                <p class="text-first-color">12 Unidades</p>
-            </article>
-            <article class="py-2">
-                <div class="flex justify-between items-end border-bottom">
-                    <h4>California Roll</h4>
-                    <span>$1200</span>
-                </div>
-                <div class="flex justify-between items-center mt-5">
-                    <p class="pr-5">Salmón, Philadelphia, Palta y Sésamo</p>
-                    <img src="../img/california-roll.png" alt="California Roll">
-                </div>
-                <p class="text-first-color">12 Unidades</p>
-            </article>
-            <article class="py-2">
-                <div class="flex justify-between items-end border-bottom">
-                    <h4>California Roll</h4>
-                    <span>$1200</span>
-                </div>
-                <div class="flex justify-between items-center mt-5">
-                    <p class="pr-5">Salmón, Philadelphia, Palta y Sésamo</p>
-                    <img src="../img/california-roll.png" alt="California Roll">
-                </div>
-                <p class="text-first-color">12 Unidades</p>
-            </article>
+            {
+                rolls.map(roll => (
+                    <article class="py-2">
+                        <div class="flex justify-between items-end border-bottom">
+                            <h4>{roll.title}</h4>
+                            <span>{roll.price}</span>
+                        </div>
+                        <div class="flex justify-between items-center mt-5">
+                            <p class="pr-5">{roll.description}</p>
+                            <img src={roll.img} alt="California Roll">
+                        </div>
+                        <p class="text-first-color">{roll.units}</p>
+                    </article>
+                ))
+            }
         </div>
     </div>
 </section>
@@ -69,11 +43,9 @@
         top: -10px;
         left: 50%;
         transform: translate(-50%);
-        font-size: 60px;
+        font-size: 80px;
         font-weight: 800;
-        color: transparent;
-        -webkit-text-stroke: 2px #ffedb7;
-        text-stroke: 2px #ffedb7;
+        color: #F3B700;
         z-index: -1;
     }
 
