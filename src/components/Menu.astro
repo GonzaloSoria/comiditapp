@@ -8,6 +8,7 @@ console.log(rolls.title);
 <section class="menu py-28 px-5" id="menu">
     <div class="container mx-auto">
         <h2 class="text-center mb-5">Menú</h2>
+        <p class="pt-5 pb-28 text-center menu-description">Somos especialistas en rolls</p>
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-4">
             {
                 rolls.map(roll => (
@@ -47,6 +48,10 @@ console.log(rolls.title);
         font-weight: 800;
         color: #F3B700;
         z-index: -1;
+    }
+
+    .menu-description {
+        font-size: 30px;
     }
 
     .border-bottom {
